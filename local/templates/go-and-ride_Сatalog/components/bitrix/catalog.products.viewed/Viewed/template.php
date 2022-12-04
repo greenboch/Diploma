@@ -133,7 +133,7 @@ $containerName = 'catalog-products-viewed-container';
 			?>
             <section class="reviewed">
                 <div class="container">
-                    <h2>Уже просмотрели</h2>
+                    <h2>Просмотренные</h2>
                     <?
                     foreach ($rowItems as $item)
                     {
