@@ -25,17 +25,47 @@
     <div class="container">
         <div class="header__wrp">
             <div class="header__wrp-nav">
-				<a href="/index.php">
-					<img src="./img/goride-logo.svg" alt="logo">
+				<a href="<?=SITE_DIR?>">
+					<?$APPLICATION->IncludeComponent(
+	"bitrix:main.include", 
+	"Included_Logo", 
+	array(
+		"AREA_FILE_SHOW" => "file",
+		"AREA_FILE_SUFFIX" => "inc(1)",
+		"EDIT_TEMPLATE" => "standard.php",
+		"COMPONENT_TEMPLATE" => "Included_Logo",
+		"AREA_FILE_RECURSIVE" => "Y",
+		"PATH" => SITE_DIR."/img/goride-logo.svg"
+	),
+	false
+);?>
                 </a>
                 <nav class="header__nav-list-wrp">
                     <ul class="header__nav-list">
-						<li><a href="/catalog/">каталог</a></li>
-                        <li><a href="/about/contacts/">контакты</a></li>
-                        <li><a href="/otzyvy.php">отзывы</a></li>
-                        <li><a href="/about/delivery/">доставка и оплата</a></li>
+
+						<?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"horizontal_multilevel1", 
+	array(
+		"ROOT_MENU_TYPE" => "top",
+		"MAX_LEVEL" => "1",
+		"CHILD_MENU_TYPE" => "left",
+		"USE_EXT" => "N",
+		"MENU_CACHE_TYPE" => "A",
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"COMPONENT_TEMPLATE" => "horizontal_multilevel1",
+		"DELAY" => "N",
+		"ALLOW_MULTI_SELECT" => "N"
+	),
+	false
+);?>
+
                     </ul>
                 </nav>
+				
                 <div class="header__nav-box header__search">
                     <form action="#">
                         <label>

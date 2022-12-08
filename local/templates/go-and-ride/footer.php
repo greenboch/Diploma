@@ -10,10 +10,10 @@
 	"bitrix:menu", 
 	"horizontal_multilevel1", 
 	array(
-		"ROOT_MENU_TYPE" => "top",
+		"ROOT_MENU_TYPE" => "left",
 		"MAX_LEVEL" => "1",
 		"CHILD_MENU_TYPE" => "left",
-		"USE_EXT" => "Y",
+		"USE_EXT" => "N",
 		"MENU_CACHE_TYPE" => "A",
 		"MENU_CACHE_TIME" => "3600",
 		"MENU_CACHE_USE_GROUPS" => "Y",
@@ -29,7 +29,7 @@
 	"bitrix:menu", 
 	"horizontal_multilevel1", 
 	array(
-		"ROOT_MENU_TYPE" => "bottom",
+		"ROOT_MENU_TYPE" => "right",
 		"MAX_LEVEL" => "1",
 		"CHILD_MENU_TYPE" => "left",
 		"USE_EXT" => "N",
@@ -45,12 +45,16 @@
 	false
 );?>
 
-<?$APPLICATION->IncludeComponent("bitrix:subscribe.form", ".default", Array(
-	"CACHE_TIME" => "3600",	// Время кеширования (сек.)
-		"CACHE_TYPE" => "A",	// Тип кеширования
-		"PAGE" => "#SITE_DIR#personal/subscribe/subscr_edit.php",	// Страница редактирования подписки (доступен макрос #SITE_DIR#)
-		"SHOW_HIDDEN" => "N",	// Показать скрытые рубрики подписки
-		"USE_PERSONALIZATION" => "Y",	// Определять подписку текущего пользователя
+<?$APPLICATION->IncludeComponent(
+	"bitrix:subscribe.form", 
+	"News", 
+	array(
+		"CACHE_TIME" => "3600",
+		"CACHE_TYPE" => "A",
+		"PAGE" => "#SITE_DIR#personal/subscribe/subscr_edit.php",
+		"SHOW_HIDDEN" => "N",
+		"USE_PERSONALIZATION" => "Y",
+		"COMPONENT_TEMPLATE" => "News"
 	),
 	false
 );?>
@@ -71,20 +75,24 @@
 		"MENU_CACHE_TIME" => "3600",
 		"MENU_CACHE_TYPE" => "N",
 		"MENU_CACHE_USE_GROUPS" => "Y",
-		"ROOT_MENU_TYPE" => "left",
+		"ROOT_MENU_TYPE" => "bottom",
 		"USE_EXT" => "N",
 		"COMPONENT_TEMPLATE" => "Social_icons_2"
 	),
 	false
 );?>
             <span><?$APPLICATION->IncludeComponent(
-	"bitrix:main.include",
-	"",
-	Array(
-		"AREA_FILE_SHOW" => "page",
+	"bitrix:main.include", 
+	"Included_Copiright", 
+	array(
+		"AREA_FILE_SHOW" => "file",
 		"AREA_FILE_SUFFIX" => "inc",
-		"EDIT_TEMPLATE" => ""
-	)
+		"EDIT_TEMPLATE" => "",
+		"COMPONENT_TEMPLATE" => "Included_Copiright",
+		"AREA_FILE_RECURSIVE" => "Y",
+		"PATH" => SITE_DIR."index_inc.php"
+	),
+	false
 );?></span>
 
 

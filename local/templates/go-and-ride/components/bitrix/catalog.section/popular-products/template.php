@@ -21,7 +21,6 @@ use \Bitrix\Main\Localization\Loc;
  */
 
 $this->setFrameMode(true);
-//$this->addExternalCss('/bitrix/css/main/bootstrap.css');
 
 
 $templateLibrary = array('popup', 'ajax', 'fx');
@@ -138,7 +137,7 @@ foreach ($arResult['ITEM_ROWS'] as $rowData)
 {
     $rowItems = array_splice($arResult['ITEMS'], 0, $rowData['COUNT']);
     ?>
-    <section class="products"> <!-- TODO div не закрыт -->
+    <section class="products">
         <div class="container">
             <h2>Популярные товары</h2>
             <?

@@ -1,4 +1,5 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+<?
+if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -11,8 +12,6 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-?>
-<section class="ride-us">
-		<img src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>" alt="ride-us-pic">
-        <a href="#"><?=$mess["/local/templates/go-and-ride/lang/ru/header.php"]["po_gorodu"]?></a>
-</section>
+
+if($arResult["FILE"] <> '')
+	include($arResult["FILE"]);
