@@ -15,16 +15,16 @@
 <?
 $frame = $this->createFrame("subscribe-form", false)->begin();
 ?>
-    <h2>подписаться на новости магазина go&ride</h2>
+    <h2><? echo GetMessage('subscribe_news')?> go&ride</h2>
     <form action="<?=$arResult["FORM_ACTION"]?>">
         <div class="footer__form-wrp">
             <label>
                 <input type="email" placeholder="Enter your Email adress" required>
                 <span class="visually-hidden">email</span>
             </label>
-            <button>подписаться</button>
+            <button><? echo GetMessage('subscribe')?></button>
         </div>
-        <span>Продолжая, вы соглашаетесь с нашей политикой конфиденциальности.</span>
+        <span><? echo GetMessage('confidential_policy')?></span>
 	</form>
 <?
 $frame->beginStub();

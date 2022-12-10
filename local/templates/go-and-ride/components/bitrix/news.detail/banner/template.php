@@ -14,5 +14,5 @@ $this->setFrameMode(true);
 ?>
 <section class="ride-us">
 		<img src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>" alt="ride-us-pic">
-        <a href="#"><?=$mess["/local/templates/go-and-ride/lang/ru/header.php"]["po_gorodu"]?></a>
+        <a href="#"><? echo GetMessage('po_gorodu')?></a>
 </section>

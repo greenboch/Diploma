@@ -1,7 +1,8 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 
 ?><!doctype html>
-<html lang="en">
+<html lang="ru">
+
 
 <head>
     <meta name="viewport"
@@ -11,6 +12,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <title><? $APPLICATION->ShowTitle(); ?></title>
+
+
+    <?
+    IncludeTemplateLangFile(__FILE__);
+    ?>
 
     <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/slick.css", true);
     $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/style.css", true);
@@ -45,7 +51,7 @@
 
 						<?$APPLICATION->IncludeComponent(
 	"bitrix:menu", 
-	"horizontal_multilevel1", 
+	"Header_menu", 
 	array(
 		"ROOT_MENU_TYPE" => "top",
 		"MAX_LEVEL" => "1",
@@ -56,7 +62,7 @@
 		"MENU_CACHE_USE_GROUPS" => "Y",
 		"MENU_CACHE_GET_VARS" => array(
 		),
-		"COMPONENT_TEMPLATE" => "horizontal_multilevel1",
+		"COMPONENT_TEMPLATE" => "Header_menu",
 		"DELAY" => "N",
 		"ALLOW_MULTI_SELECT" => "N"
 	),
@@ -70,7 +76,7 @@
                     <form action="#">
                         <label>
                             <input type="search" placeholder="Поиск">
-                            <span class="visually-hidden">поиск</span>
+                            <span class="visually-hidden"><? echo GetMessage('search');?></span>
                         </label>
                     </form>
                     <a href="/login/">
@@ -94,8 +100,8 @@
             <div class="header__wrp-first-screen">
                 <div class="header__desc">
                     <h2>go&ride</h2>
-                    <p>велосипеды & аксессуары</p>
-					<a href="/catalog/">магазин</a>
+                    <p><? echo GetMessage('bicycles$accessories');?></p>
+					<a href="/catalog/"><? echo GetMessage('shop');?></a>
                 </div>
             </div>
             <div class="header__second-screen">

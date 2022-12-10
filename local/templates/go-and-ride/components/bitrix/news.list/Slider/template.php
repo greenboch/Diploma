@@ -17,14 +17,14 @@ $this->setFrameMode(true);
 
     <section class="city-bike">
         <div class="container">
-            <h2>Городские велосипеды</h2>
+            <h2><? echo GetMessage('city_bicycles')?></h2>
             <div class="slider slick-city-slider">
                 <div class="slider__item">
                     <div class="city-bike__slide-wrp">
                         <img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="city-bike">
                         <div class="city-bike__content">
                             <p><?echo strip_tags($arItem["PREVIEW_TEXT"], '<br>');?></p>
-                            <a href="/catalog/">в раздел</a>
+                            <a href="/catalog/"><? echo GetMessage('to_section')?></a>
                         </div>
                     </div>
                 </div>

@@ -133,7 +133,7 @@ $containerName = 'catalog-products-viewed-container';
 			?>
             <section class="reviewed">
                 <div class="container">
-                    <h2>Уже просмотрели</h2>
+                    <h2><? echo GetMessage('viewed')?></h2>
                     <?
                     foreach ($rowItems as $item)
                     {
@@ -144,11 +144,11 @@ $containerName = 'catalog-products-viewed-container';
                                     <img src="<?=$item["PREVIEW_PICTURE"]["SRC"]?>" alt="good-1">
                                     <div class="slider__item-content-wrp">
                                         <h3><a href="product.html"><?=$item["NAME"]?></a></h3>
-                                        <p>Цена: <?=$item["ITEM_PRICES"]["PRINT_BASE_PRICE"]?> р</p>
-                                        <p>Артикул: <?=$item["ID"]?></p>
+                                        <p><? echo GetMessage('price')?> <?=$item["ITEM_PRICES"]["PRINT_BASE_PRICE"]?> р</p>
+                                        <p><? echo GetMessage('vendor_code')?> <?=$item["ID"]?></p>
                                     </div>
                                 </div>
-                                <button>купить срочно</button>
+                                <button><? echo GetMessage('buy_urgent')?></button>
                             </div>
                         </div>
                         <?

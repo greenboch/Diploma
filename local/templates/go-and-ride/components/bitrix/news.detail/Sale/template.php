@@ -14,7 +14,7 @@ $this->setFrameMode(true);
 ?>
 <section class="sale">
     <div class="container sale__wrp">
-        <h2>Скидка 5%</h2>
+        <h2><? echo GetMessage('sale_5%')?></h2>
         <div class="sale__img-wrp">
             <img src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>" alt="helmet">
         </div>

@@ -139,7 +139,7 @@ foreach ($arResult['ITEM_ROWS'] as $rowData)
     ?>
     <section class="products">
         <div class="container">
-            <h2>Популярные товары</h2>
+            <h2><? echo GetMessage('popular_goods');?></h2>
             <?
             foreach ($rowItems as $item)
             {
@@ -150,8 +150,8 @@ foreach ($arResult['ITEM_ROWS'] as $rowData)
                                 <img src="<?=$item["PREVIEW_PICTURE"]["SRC"]?>" alt="good-1">
                                 <div class="slider__item-content-wrp">
                                     <h3><a href="product.html"><?=$item["NAME"]?></a></h3>
-                                    <p>Цена: <?=$item["CATALOG_PRICE_1"]?> р</p>
-                                    <p>Артикул: <?=$item["ID"]?></p>
+                                    <p><? echo GetMessage('price');?> <?=$item["CATALOG_PRICE_1"]?> р</p>
+                                    <p><? echo GetMessage('vendor_code');?> <?=$item["ID"]?></p>
                                 </div>
                             </div>
                         </div>

@@ -8,7 +8,7 @@
         <div class="footer__wrp">
             <?$APPLICATION->IncludeComponent(
 	"bitrix:menu", 
-	"horizontal_multilevel1", 
+	"Footer_menu", 
 	array(
 		"ROOT_MENU_TYPE" => "left",
 		"MAX_LEVEL" => "1",
@@ -19,7 +19,7 @@
 		"MENU_CACHE_USE_GROUPS" => "Y",
 		"MENU_CACHE_GET_VARS" => array(
 		),
-		"COMPONENT_TEMPLATE" => "horizontal_multilevel1",
+		"COMPONENT_TEMPLATE" => "Footer_menu",
 		"DELAY" => "N",
 		"ALLOW_MULTI_SELECT" => "N"
 	),
@@ -27,7 +27,7 @@
 );?>
 			<?$APPLICATION->IncludeComponent(
 	"bitrix:menu", 
-	"horizontal_multilevel1", 
+	"Footer_menu", 
 	array(
 		"ROOT_MENU_TYPE" => "right",
 		"MAX_LEVEL" => "1",
@@ -38,7 +38,7 @@
 		"MENU_CACHE_USE_GROUPS" => "Y",
 		"MENU_CACHE_GET_VARS" => array(
 		),
-		"COMPONENT_TEMPLATE" => "horizontal_multilevel1",
+		"COMPONENT_TEMPLATE" => "Footer_menu",
 		"DELAY" => "N",
 		"ALLOW_MULTI_SELECT" => "N"
 	),
