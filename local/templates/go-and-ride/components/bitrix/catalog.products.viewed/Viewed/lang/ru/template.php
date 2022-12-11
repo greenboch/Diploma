@@ -24,4 +24,7 @@ $MESS["CT_CPV_CATALOG_BTN_MESSAGE_LAZY_LOAD_WAITER"] = "Загрузка";
 $MESS["CT_CPV_CATALOG_SHOW_MAX_QUANTITY"] = "Наличие";
 $MESS["CT_CPV_CATALOG_RELATIVE_QUANTITY_MANY"] = "много";
 $MESS["CT_CPV_CATALOG_RELATIVE_QUANTITY_FEW"] = "мало";
+
+$MESS['viewed'] = "Уже просмотрели";
+$MESS['buy_urgent'] = "купить срочно";
 ?>

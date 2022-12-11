@@ -132,19 +132,21 @@ $containerName = 'container-'.$navParams['NavNum'];
 ?>
 
 <!-- items-container -->
+<section class="products">
+    <div class="container">
+        <h2><? echo GetMessage('popular_goods');?></h2>
+        <div class="slider slick-good-slider">
 <?
 foreach ($arResult['ITEM_ROWS'] as $rowData)
 {
     $rowItems = array_splice($arResult['ITEMS'], 0, $rowData['COUNT']);
     ?>
-    <section class="products">
-        <div class="container">
-            <h2><? echo GetMessage('popular_goods');?></h2>
+
             <?
             foreach ($rowItems as $item)
             {
                 ?>
-                <div class="slider slick-good-slider">
+
                         <div class="slider__item">
                             <div class="slider__item-wrp">
                                 <img src="<?=$item["PREVIEW_PICTURE"]["SRC"]?>" alt="good-1">
@@ -155,12 +157,11 @@ foreach ($arResult['ITEM_ROWS'] as $rowData)
                                 </div>
                             </div>
                         </div>
-                </div>
+
                 <?
             }
             ?>
-        </div>
-    </section>
+
     <?
     break;
     ?>
@@ -168,6 +169,9 @@ foreach ($arResult['ITEM_ROWS'] as $rowData)
 }
 unset($generalParams, $rowItems);
 ?>
+        </div>
+    </div>
+</section>
 <!-- items-container -->
 
 <!-- component-end -->

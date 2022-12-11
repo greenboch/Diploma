@@ -99,9 +99,9 @@
         </div>
     </div>
 </footer>
-<script defer src="/local/templates/GO AND RIDE/js/jquery.js"></script>
-<script defer src="/local/templates/GO AND RIDE/js/slick.js"></script>
-<script defer src="/local/templates/GO AND RIDE/js/scripts.js"></script>
+<script defer src="<?=SITE_TEMPLATE_PATH?>/js/jquery.js"></script>
+<script defer src="<?=SITE_TEMPLATE_PATH?>/js/slick.js"></script>
+<script defer src="<?=SITE_TEMPLATE_PATH?>/js/scripts.js"></script>
 </body>
 
 </html>

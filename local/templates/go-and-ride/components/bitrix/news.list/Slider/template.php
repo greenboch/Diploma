@@ -12,13 +12,13 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-
+<section class="city-bike">
+    <div class="container">
+        <h2><? echo GetMessage('city_bicycles')?></h2>
+        <div class="slider slick-city-slider">
 <?foreach($arResult["ITEMS"] as $arItem):?>
 
-    <section class="city-bike">
-        <div class="container">
-            <h2><? echo GetMessage('city_bicycles')?></h2>
-            <div class="slider slick-city-slider">
+
                 <div class="slider__item">
                     <div class="city-bike__slide-wrp">
                         <img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="city-bike">
@@ -29,9 +29,10 @@ $this->setFrameMode(true);
                     </div>
                 </div>
 
-            </div>
-        </div>
-    </section>
+
 <?endforeach;?>
+        </div>
+    </div>
+</section>
 
 
